@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 import styled from 'styled-components';
+import { ClearButton } from '../styledComponents'
 
 const List = styled.div`
     display: flex;
@@ -18,7 +19,7 @@ const ToDoList = props => {
             ))}
             
             </List>
-            <button onClick={props.clearCompleted}> Delete Completed Items</button>
+            <ClearButton onClick={props.clearCompleted}> Delete Completed Items</ClearButton>
         </div>
         
     )

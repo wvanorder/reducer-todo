@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { SubmitButton, Input } from '../styledComponents';
+
 
 const ToDoForm = props => {
     const [newToDo, editNewToDo] = useState('');
@@ -15,13 +17,13 @@ const ToDoForm = props => {
 
     return(
         <form onSubmit={submitToDo}>
-            <input
+            <Input
                 type='text'
                 value={newToDo}
                 name='toDo'
                 onChange={handleChange}
             />
-            <button> Add To Do</button>
+            <SubmitButton> Add To Do</SubmitButton>
         </form>
     )
 };

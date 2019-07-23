@@ -28,8 +28,9 @@ const ToDoItem = props => {
 
     const Toodoo = styled.div`
     width: 700px;
-    height: 255px;
+    height: 230px;
     margin: 20px 20px;
+    border-radius: 15%;
     font-size: ${isLate  && !props.toDo.isCompleted ? '50px' : '35px'};
     color: ${isLate  && !props.toDo.isCompleted ? 'tomato' : 'darkslategrey'};
     background-color: ${props.toDo.isCompleted ? 'mediumaquamarine' : 'beige'};
@@ -40,10 +41,6 @@ const ToDoItem = props => {
     p{
         width: 70%;
     }
-     button{
-         width: 70px;
-         height: 30px;
-     }
 `
 
     return (
@@ -51,7 +48,7 @@ const ToDoItem = props => {
              <Toodoo
             onClick ={() => props.toggleCompleted(props.toDo.id)} >
             <p>{props.toDo.description}  <br /> due : {moment(props.toDo.dueDate).format('MM-DD-YYYY')}</p>
-            <button onClick={() => props.deleteToDo(props.toDo.id)} >Delete ToDo</button>
+            <Button onClick={() => props.deleteToDo(props.toDo.id)} >Delete ToDo</Button>
         </Toodoo>
         
         </div>
@@ -60,3 +57,16 @@ const ToDoItem = props => {
 };
 
 export default ToDoItem;
+
+const Button = styled.button`
+    background-color: darkred;
+    color: white;
+    font-size: 36px;
+    width: 20%;
+    height: 40%;
+    border-radius: 30%;
+    &:hover{
+        background-color: orangered;
+        transition-duration: 0.2s;
+    }
+`

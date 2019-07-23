@@ -6,13 +6,13 @@ export const initialState = {
             description: 'take out the trash',
             id: 123,
             isCompleted: false,
-            dueDate: moment('04/12/2019').format('MM/DD/YYYY')
+            dueDate: moment('07/19/2019').format('MM/DD/YYYY')
         },
         {
             description: 'Mow the lawn',
             id: 124,
             isCompleted: false,
-            dueDate: moment('07/12/19').format('MM/DD/YYYY')
+            dueDate: moment('06/29/19').format('MM/DD/YYYY')
         },
         {
             description: 'drink from the cup of corporate america',
@@ -24,7 +24,7 @@ export const initialState = {
             description: 'try not to cry',
             id: 126,
             isCompleted: false,
-            dueDate: moment('03/12/2018').format('MM/DD/YYYY')
+            dueDate: moment('07/04/2019').format('MM/DD/YYYY')
         },
         {
             description: 'cry a lot',

@@ -4,6 +4,12 @@ import moment from 'moment';
 import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
 import './App.css';
+import styled from 'styled-components';
+
+const H1 = styled.h1`
+  font-size: 128px;
+  margin: 0 auto;
+`
 
 function App() {
   const [{ toDos }, dispatch] = useReducer(reducer, initialState);
@@ -31,7 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Git 'Er Done</h1>
+      <H1>{toDos.length > 0 ? `Git 'Er Done` : `Got 'Er Done` }</H1>
       <ToDoForm addToDo={addToDo} />
       <ToDoList
         toDos={toDos}
